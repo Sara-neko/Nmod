@@ -7,5 +7,18 @@
   "item.nmod.phazon_chestplate": "Phazon Chestplate",
   "item.nmod.phazon_leggings": "Phazon Leggings",
   "item.nmod.phazon_boots": "Phazon Boots",
-  "item.nmod.cherry": "Cherry"
+  "item.nmod.cherry": "Cherry",
+  "item.nmod.blueberries": "Blueberrries",
+  "item.nmod.red_fruit_tea": "Red Fruit Tea",
+  "item.nmod.tea_leaf": "Tea Leaf",
+  "item.nmod.cup": "Cup",
+  "item.nmod.dried_tea_leaf": "Dried Tea Leaf",
+  "item.nmod.coffee": "Coffee",
+  "item.nmod.flour": "Flour",
+  "item.nmod.tomato": "Tomato",
+  "item.nmod.burger": "Burger",
+  "item.nmod.cheese": "Cheese",
+  "block.nmod.edarite_ore": "Edarite Ore",
+  "item.nmod.edarite_crystal": "Edarite Crystal",
+  "item.nmod.ground_coffee": "Ground Coffee"
 }
