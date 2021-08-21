@@ -20,5 +20,7 @@
   "item.nmod.cheese": "Cheese",
   "block.nmod.edarite_ore": "Edarite Ore",
   "item.nmod.edarite_crystal": "Edarite Crystal",
-  "item.nmod.ground_coffee": "Ground Coffee"
+  "item.nmod.ground_coffee": "Ground Coffee",
+  "item.nmod.steel_ingot": "Steel Ingot",
+  "item.nmod.bismuth_crysal": "Bismuth Crystal"
 }

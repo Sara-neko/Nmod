@@ -26,7 +26,8 @@ public class ModItems
     public static final RegistryObject<Item> CUP = ITEMS.register("cup", () -> new Item(new Item.Properties().maxStackSize(4).group(ItemGroup.MATERIALS)));
     public static final RegistryObject<Item> GROUND_COFFEE = ITEMS.register("ground_coffee", () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
     public static final RegistryObject<Item> FLOUR = ITEMS.register("flour", () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
-    public static final RegistryObject<Item> EDARITE_CRYSTAL = ITEMS.register("edarite_crystal", ()-> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
+    public static final RegistryObject<Item> EDARITE_CRYSTAL = ITEMS.register("edarite_crystal", () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
+    public static final RegistryObject<Item> STEEL_INGOT = ITEMS.register("steel_ingot", () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
     public static final RegistryObject<Item> BISMUTH_CRYSTAL = ITEMS.register("bismuth_crystal",()-> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
 
 //Arme et Outil
