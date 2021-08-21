@@ -16,8 +16,12 @@ import java.util.function.Supplier;
 public enum CustomArmorMaterials implements IArmorMaterial {
 
 
-    PHAZON_ARMOR(Nmod.MODID + ":phazon",37, new int[]{3, 6, 8, 3}, 14, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.2f, 0.1f, () -> {
+    PHAZON_ARMOR(Nmod.MODID + ":phazon",37, new int[]{4, 6, 8, 4}, 14, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.2f, 0.1f, () -> {
         return Ingredient.fromItems(ModItems.LIQUID_PHAZON.get());
+    }),
+
+    DARK_ARMOR(Nmod.MODID + ":dark", 40, new int[]{4, 7, 9, 4}, 7, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.5f, 0.3f, () -> {
+        return Ingredient.fromItems(ModItems.DARK_INGOT.get());
     });
 
 
