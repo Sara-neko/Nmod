@@ -28,16 +28,21 @@ public class ModItems
     public static final RegistryObject<Item> FLOUR = ITEMS.register("flour", () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
     public static final RegistryObject<Item> EDARITE_CRYSTAL = ITEMS.register("edarite_crystal", ()-> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
     public static final RegistryObject<Item> BISMUTH_CRYSTAL = ITEMS.register("bismuth_crystal",()-> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
+    public static final RegistryObject<Item> DARK_INGOT = ITEMS.register("dark_ingot", ()-> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
 
 //Arme et Outil
-    public static final RegistryObject<Item> PHAZON_SWORD = ITEMS.register("phazon_sword", () -> new SwordItem(CustomItemTiers.PHAZON,1, -1.1f, new Item.Properties().maxStackSize(1).group(ItemGroup.COMBAT)));
-    public static final RegistryObject<Item> PHAZON_PICKAXE = ITEMS.register("phazon_pickaxe", () -> new PickaxeItem(CustomItemTiers.PHAZON,-3, -2f, new Item.Properties().maxStackSize(1).group(ItemGroup.TOOLS)));
+    public static final RegistryObject<Item> PHAZON_SWORD = ITEMS.register("phazon_sword", () -> new SwordItem(CustomItemTiers.PHAZON,4, -2.1f, new Item.Properties().maxStackSize(1).group(ItemGroup.COMBAT)));
+    public static final RegistryObject<Item> PHAZON_PICKAXE = ITEMS.register("phazon_pickaxe", () -> new PickaxeItem(CustomItemTiers.PHAZON,2, -2.4f, new Item.Properties().maxStackSize(1).group(ItemGroup.TOOLS)));
 
 // Armure
     public static final RegistryObject<Item> PHAZON_HELMET = ITEMS.register("phazon_helmet", () -> new ArmorItem(CustomArmorMaterials.PHAZON_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroup.COMBAT)));
     public static final RegistryObject<Item> PHAZON_CHESTPLATE = ITEMS.register("phazon_chestplate", () -> new ArmorItem(CustomArmorMaterials.PHAZON_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().group(ItemGroup.COMBAT)));
     public static final RegistryObject<Item> PHAZON_LEGGINGS = ITEMS.register("phazon_leggings", () -> new ArmorItem(CustomArmorMaterials.PHAZON_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().group(ItemGroup.COMBAT)));
     public static final RegistryObject<Item> PHAZON_BOOTS = ITEMS.register("phazon_boots", () -> new ArmorItem(CustomArmorMaterials.PHAZON_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup.COMBAT)));
+    public static final RegistryObject<Item> DARK_HELMET = ITEMS.register( "dark_helmet",() -> new ArmorItem(CustomArmorMaterials.DARK_ARMOR,EquipmentSlotType.HEAD, new Item.Properties().maxStackSize(1).group(ItemGroup.COMBAT)));
+    public static final RegistryObject<Item> DARK_CHESTPLATE = ITEMS.register( "dark_chestplate",() -> new ArmorItem(CustomArmorMaterials.DARK_ARMOR,EquipmentSlotType.CHEST, new Item.Properties().maxStackSize(1).group(ItemGroup.COMBAT)));
+    public static final RegistryObject<Item> DARK_LEGGINGS = ITEMS.register( "dark_leggings",() -> new ArmorItem(CustomArmorMaterials.DARK_ARMOR,EquipmentSlotType.LEGS, new Item.Properties().maxStackSize(1).group(ItemGroup.COMBAT)));
+    public static final RegistryObject<Item> DARK_BOOTS = ITEMS.register( "dark_boots",() -> new ArmorItem(CustomArmorMaterials.DARK_ARMOR,EquipmentSlotType.FEET, new Item.Properties().maxStackSize(1).group(ItemGroup.COMBAT)));
 
 // Consomable mangeable
     public static final RegistryObject<Item> CHERRY = ITEMS.register("cherry", () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(new Food.Builder().hunger(2).saturation(0.3F).fastToEat().effect(()-> new EffectInstance(Effects.INSTANT_HEALTH, 1*1, 0),0.1F).build())));
