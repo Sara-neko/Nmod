@@ -6,7 +6,7 @@ import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.LazyValue;
 
 public enum CustomItemTiers implements IItemTier {
-    PHAZON(4, 2031, 9f, 4f, 8, new LazyValue<>(() -> {return Ingredient.fromItems(ModItems.LIQUID_PHAZON.get());}));
+    PHAZON(4, 2031, 9f, 4f, 8, new LazyValue<>(() -> {return Ingredient.of(ModItems.LIQUID_PHAZON.get());}));
 
     private final int harvestLevel;
     private final int maxUses;
@@ -24,33 +24,34 @@ public enum CustomItemTiers implements IItemTier {
         this.repairMaterial = repairMaterial;
     }
 
+
     @Override
-    public int getMaxUses() {
-        return maxUses;
+    public int getUses() {
+        return 0;
     }
 
     @Override
-    public float getEfficiency() {
-        return efficiency;
+    public float getSpeed() {
+        return 0;
     }
 
     @Override
-    public float getAttackDamage() {
-        return attackDamage;
+    public float getAttackDamageBonus() {
+        return 0;
     }
 
     @Override
-    public int getHarvestLevel() {
-        return harvestLevel;
+    public int getLevel() {
+        return 0;
     }
 
     @Override
-    public int getEnchantability() {
-        return enchantability;
+    public int getEnchantmentValue() {
+        return 0;
     }
 
     @Override
-    public Ingredient getRepairMaterial() {
-        return repairMaterial.getValue();
+    public Ingredient getRepairIngredient() {
+        return null;
     }
 }

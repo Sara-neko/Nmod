@@ -16,16 +16,16 @@ import java.util.function.Supplier;
 public enum CustomArmorMaterials implements IArmorMaterial {
 
 
-    PHAZON_ARMOR(Nmod.MODID + ":phazon",37, new int[]{4, 6, 8, 4}, 14, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.2f, 0.1f, () -> {
-        return Ingredient.fromItems(ModItems.LIQUID_PHAZON.get());
+    PHAZON_ARMOR(Nmod.MODID + ":phazon",37, new int[]{4, 6, 8, 4}, 14, SoundEvents.ARMOR_EQUIP_DIAMOND, 3.2f, 0.1f, () -> {
+        return Ingredient.of(ModItems.LIQUID_PHAZON.get());
     }),
 
-    DARK_ARMOR(Nmod.MODID + ":dark", 40, new int[]{4, 7, 9, 4}, 7, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.5f, 0.3f, () -> {
-        return Ingredient.fromItems(ModItems.DARK_INGOT.get());
+    DARK_ARMOR(Nmod.MODID + ":dark", 40, new int[]{4, 7, 9, 4}, 7, SoundEvents.ARMOR_EQUIP_DIAMOND, 3.5f, 0.3f, () -> {
+        return Ingredient.of(ModItems.DARK_INGOT.get());
     }),
 
-    STEEL_ARMOR(Nmod.MODID + ":steel",22, new int[]{2, 6, 7, 2}, 15, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 1f,0f, () ->{
-        return Ingredient.fromItems(ModItems.STEEL_INGOT.get());
+    STEEL_ARMOR(Nmod.MODID + ":steel",22, new int[]{2, 6, 7, 2}, 15, SoundEvents.ARMOR_EQUIP_IRON, 1f,0f, () ->{
+        return Ingredient.of(ModItems.STEEL_INGOT.get());
     });
 
     private static final int[] MAX_DAMAGE_ARRAY = new int[]{13, 15, 16, 11};
@@ -49,24 +49,29 @@ public enum CustomArmorMaterials implements IArmorMaterial {
         this.repairMaterial = new LazyValue<>(repairMaterial);
     }
 
-    public int getDurability(EquipmentSlotType slotIn) {
+    @Override
+    public int getDurabilityForSlot(EquipmentSlotType slotIn) {
         return MAX_DAMAGE_ARRAY[slotIn.getIndex()] * this.maxDamageFactor;
     }
 
-    public int getDamageReductionAmount(EquipmentSlotType slotIn) {
+    @Override
+    public int getDefenseForSlot(EquipmentSlotType slotIn) {
         return this.damageReductionAmountArray[slotIn.getIndex()];
     }
 
-    public int getEnchantability() {
+    @Override
+    public int getEnchantmentValue() {
         return this.enchantability;
     }
 
-    public SoundEvent getSoundEvent() {
+    @Override
+    public SoundEvent getEquipSound() {
         return this.soundEvent;
     }
 
-    public Ingredient getRepairMaterial() {
-        return this.repairMaterial.getValue();
+    @Override
+    public Ingredient getRepairIngredient() {
+        return this.repairMaterial.get();
     }
 
     @OnlyIn(Dist.CLIENT)
@@ -78,7 +83,10 @@ public enum CustomArmorMaterials implements IArmorMaterial {
         return this.toughness;
     }
 
-    public float func_230304_f_() {
+    /**
+     * Gets the percentage of knockback resistance provided by armor of the material.
+     */
+    public float getKnockbackResistance() {
         return this.knockbackResistance;
     }
 }

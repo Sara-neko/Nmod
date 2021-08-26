@@ -19,8 +19,8 @@ public class ModBlocks {
 
 
 
-    public static final RegistryObject<Block> CUIVRE = createBlock("cuivre", () -> new Block(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(3f,15f).harvestTool(ToolType.PICKAXE).harvestLevel(3).func_235861_h_()));
-    public static final RegistryObject<Block> EDARITE_ORE = createBlock("edarite_ore",() -> new Block(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(3f,15f).harvestTool(ToolType.PICKAXE).harvestLevel(3).func_235861_h_()));
+    public static final RegistryObject<Block> CUIVRE = createBlock("cuivre", () -> new Block(AbstractBlock.Properties.of(Material.METAL).strength(3f, 15f).harvestTool(ToolType.PICKAXE).harvestLevel(3).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> EDARITE_ORE = createBlock("edarite_ore",() -> new Block(AbstractBlock.Properties.of(Material.METAL).strength(3f, 15f).harvestTool(ToolType.PICKAXE).harvestLevel(3).requiresCorrectToolForDrops()));
 
     public static RegistryObject<Block> createBlock(String name, Supplier<? extends Block> supplier)
     {

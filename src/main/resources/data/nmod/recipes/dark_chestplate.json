@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "D D",
+    "DDD",
+    "DDD"
+  ],
+  "key": {
+    "D": {
+      "item": "nmod:dark_ingot"
+    }
+  },
+  "result": {
+    "item": "nmod:dark_chestplate",
+    "count": 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:diamond_sword"
+  },
+  "addition": {
+    "item": "nmod:liquid_phazon"
+  },
+  "result": {
+    "item": "nmod:phazon_sword"
+  }
+}
