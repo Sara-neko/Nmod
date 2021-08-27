@@ -45,7 +45,6 @@ public class ModItems
     public static final RegistryObject<Item> DARK_CHESTPLATE = ITEMS.register( "dark_chestplate",() -> new ArmorItem(CustomArmorMaterials.DARK_ARMOR,EquipmentSlotType.CHEST, new Item.Properties().tab(ItemGroup.TAB_COMBAT)));
     public static final RegistryObject<Item> DARK_LEGGINGS = ITEMS.register( "dark_leggings",() -> new ArmorItem(CustomArmorMaterials.DARK_ARMOR,EquipmentSlotType.LEGS, new Item.Properties().tab(ItemGroup.TAB_COMBAT)));
     public static final RegistryObject<Item> DARK_BOOTS = ITEMS.register( "dark_boots",() -> new ArmorItem(CustomArmorMaterials.DARK_ARMOR,EquipmentSlotType.FEET, new Item.Properties().tab(ItemGroup.TAB_COMBAT)));
-
     public static final RegistryObject<Item> STEEL_HELMET = ITEMS.register("steel_helmet", () -> new ArmorItem(CustomArmorMaterials.STEEL_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().tab(ItemGroup.TAB_COMBAT)));
     public static final RegistryObject<Item> STEEL_CHESTPLATE = ITEMS.register("steel_chestplate", () -> new ArmorItem(CustomArmorMaterials.STEEL_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().tab(ItemGroup.TAB_COMBAT)));
     public static final RegistryObject<Item> STEEL_LEGGINGS = ITEMS.register("steel_leggings", () -> new ArmorItem(CustomArmorMaterials.STEEL_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().tab(ItemGroup.TAB_COMBAT)));

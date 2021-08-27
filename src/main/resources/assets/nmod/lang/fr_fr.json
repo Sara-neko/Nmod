@@ -21,5 +21,6 @@
   "item.nmod.cheese": "Fromage",
   "item.nmod.edarite_crystal": "Cristal d'Edarite",
   "block.nmod.edarite_ore": "Mirerai d'Edarite",
-  "item.nmod.bismuth_crystal": "Cristal de Bismuth"
+  "item.nmod.bismuth_crystal": "Cristal de Bismuth",
+  "item.nmod.soft_bread": "Pain de Mie"
 }
