@@ -22,6 +22,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> CUIVRE = createBlock("cuivre", () -> new Block(AbstractBlock.Properties.of(Material.METAL).strength(3f,15f).harvestTool(ToolType.PICKAXE).harvestLevel(3)));
     public static final RegistryObject<Block> EDARITE_ORE = createBlock("edarite_ore",() -> new Block(AbstractBlock.Properties.of(Material.METAL).strength(3f,15f).harvestTool(ToolType.PICKAXE).harvestLevel(3)));
 
+
     public static RegistryObject<Block> createBlock(String name, Supplier<? extends Block> supplier)
     {
         RegistryObject<Block> block = BLOCKS.register(name, supplier);

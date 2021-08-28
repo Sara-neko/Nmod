@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer1": "nmod:item/steel_boots"
+    "layer0": "nmod:item/steel_boots"
   }
 
 }

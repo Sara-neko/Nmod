@@ -23,5 +23,17 @@
   "item.nmod.ground_coffee": "Ground Coffee",
   "item.nmod.steel_ingot": "Steel Ingot",
   "item.nmod.bismuth_crysal": "Bismuth Crystal",
-  "item.nmod.bismuth_ingot": "Bismuth Ingot"
+  "item.nmod.dark_ingot": "Dark Ingot",
+  "item.nmod.dark_helmet": "Dark Helmet",
+  "item.nmod.dark_chestplate": "Dark Chestplate",
+  "item.nmod.dark_leggings": "Dark Leggings",
+  "item.nmod.dark_boots": "Dark Boots",
+  "item.nmod.steel_ingot": "Steel Ingot",
+  "item.nmod.steel_helmet": "Steel Helmet",
+  "item.nmod.steel_chesplate": "Steel Chesplate",
+  "item.nmod.steel_leggings": "Steel Leggings",
+  "item.nmod.steel_boots": "Steel Boots",
+  "item.nmod.lava_rock": "Lava Rock",
+  "item.nmod.soft_beard": "Soft Bread"
+
 }

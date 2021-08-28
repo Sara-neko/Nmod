@@ -21,5 +21,17 @@
   "item.nmod.cheese": "Fromage",
   "item.nmod.edarite_crystal": "Cristal d'Edarite",
   "block.nmod.edarite_ore": "Mirerai d'Edarite",
-  "item.nmod.bismuth_crystal": "Cristal de Bismuth"
+  "item.nmod.bismuth_crystal": "Cristal de Bismuth",
+  "item.nmod.dark_ingot": "Lingot Sombre",
+  "item.nmod.dark_helmet": "Casque Sombre",
+  "item.nmod.dark_chestplate": "Plastron Sombre",
+  "item.nmod.dark_leggings": "Jambière Sombre",
+  "item.nmod.dark_boots": "Bottes Sombre",
+  "item.nmod.steel_ingot": "Lingot d'acier",
+  "item.nmod.steel_helmet": "Casque d'acier",
+  "item.nmod.steel_chesplate": "Plastron d'acier",
+  "item.nmod.steel_leggings": "Jambière d'acier",
+  "item.nmod.steel_boots": "Bottes d'acier",
+  "item.nmod.lava_rock": "Magma",
+  "item.nmod.soft_beard": "Beurre doux"
 }
