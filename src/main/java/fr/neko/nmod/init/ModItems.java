@@ -5,16 +5,24 @@ import fr.neko.nmod.utils.CustomArmorMaterials;
 import fr.neko.nmod.utils.CustomItemTiers;
 import fr.neko.nmod.utils.ModItemGroups;
 import net.minecraft.fluid.Fluids;
-import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.item.*;
-import net.minecraft.potion.EffectInstance;
-import net.minecraft.potion.Effects;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 
+
+import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.PickaxeItem;
+import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.UseAnim;
 
 public class ModItems
 {
@@ -38,49 +46,49 @@ public class ModItems
     public static final RegistryObject<Item> PHAZON_PICKAXE = ITEMS.register("phazon_pickaxe", () -> new PickaxeItem(CustomItemTiers.PHAZON,2, -2.4f, new Item.Properties().stacksTo(1).tab(ModItemGroups.Nmod_TAB)));
 
 // Armure
-    public static final RegistryObject<Item> PHAZON_HELMET = ITEMS.register("phazon_helmet", () -> new ArmorItem(CustomArmorMaterials.PHAZON_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().tab(ModItemGroups.Nmod_TAB)));
-    public static final RegistryObject<Item> PHAZON_CHESTPLATE = ITEMS.register("phazon_chestplate", () -> new ArmorItem(CustomArmorMaterials.PHAZON_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().tab(ModItemGroups.Nmod_TAB)));
-    public static final RegistryObject<Item> PHAZON_LEGGINGS = ITEMS.register("phazon_leggings", () -> new ArmorItem(CustomArmorMaterials.PHAZON_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().tab(ModItemGroups.Nmod_TAB)));
-    public static final RegistryObject<Item> PHAZON_BOOTS = ITEMS.register("phazon_boots", () -> new ArmorItem(CustomArmorMaterials.PHAZON_ARMOR, EquipmentSlotType.FEET, new Item.Properties().tab(ModItemGroups.Nmod_TAB)));
-    public static final RegistryObject<Item> DARK_HELMET = ITEMS.register( "dark_helmet",() -> new ArmorItem(CustomArmorMaterials.DARK_ARMOR,EquipmentSlotType.HEAD, new Item.Properties().tab(ModItemGroups.Nmod_TAB)));
-    public static final RegistryObject<Item> DARK_CHESTPLATE = ITEMS.register( "dark_chestplate",() -> new ArmorItem(CustomArmorMaterials.DARK_ARMOR,EquipmentSlotType.CHEST, new Item.Properties().tab(ModItemGroups.Nmod_TAB)));
-    public static final RegistryObject<Item> DARK_LEGGINGS = ITEMS.register( "dark_leggings",() -> new ArmorItem(CustomArmorMaterials.DARK_ARMOR,EquipmentSlotType.LEGS, new Item.Properties().tab(ModItemGroups.Nmod_TAB)));
-    public static final RegistryObject<Item> DARK_BOOTS = ITEMS.register( "dark_boots",() -> new ArmorItem(CustomArmorMaterials.DARK_ARMOR,EquipmentSlotType.FEET, new Item.Properties().tab(ModItemGroups.Nmod_TAB)));
+    public static final RegistryObject<Item> PHAZON_HELMET = ITEMS.register("phazon_helmet", () -> new ArmorItem(CustomArmorMaterials.PHAZON_ARMOR, EquipmentSlot.HEAD, new Item.Properties().tab(ModItemGroups.Nmod_TAB)));
+    public static final RegistryObject<Item> PHAZON_CHESTPLATE = ITEMS.register("phazon_chestplate", () -> new ArmorItem(CustomArmorMaterials.PHAZON_ARMOR, EquipmentSlot.CHEST, new Item.Properties().tab(ModItemGroups.Nmod_TAB)));
+    public static final RegistryObject<Item> PHAZON_LEGGINGS = ITEMS.register("phazon_leggings", () -> new ArmorItem(CustomArmorMaterials.PHAZON_ARMOR, EquipmentSlot.LEGS, new Item.Properties().tab(ModItemGroups.Nmod_TAB)));
+    public static final RegistryObject<Item> PHAZON_BOOTS = ITEMS.register("phazon_boots", () -> new ArmorItem(CustomArmorMaterials.PHAZON_ARMOR, EquipmentSlot.FEET, new Item.Properties().tab(ModItemGroups.Nmod_TAB)));
+    public static final RegistryObject<Item> DARK_HELMET = ITEMS.register( "dark_helmet",() -> new ArmorItem(CustomArmorMaterials.DARK_ARMOR,EquipmentSlot.HEAD, new Item.Properties().tab(ModItemGroups.Nmod_TAB)));
+    public static final RegistryObject<Item> DARK_CHESTPLATE = ITEMS.register( "dark_chestplate",() -> new ArmorItem(CustomArmorMaterials.DARK_ARMOR,EquipmentSlot.CHEST, new Item.Properties().tab(ModItemGroups.Nmod_TAB)));
+    public static final RegistryObject<Item> DARK_LEGGINGS = ITEMS.register( "dark_leggings",() -> new ArmorItem(CustomArmorMaterials.DARK_ARMOR,EquipmentSlot.LEGS, new Item.Properties().tab(ModItemGroups.Nmod_TAB)));
+    public static final RegistryObject<Item> DARK_BOOTS = ITEMS.register( "dark_boots",() -> new ArmorItem(CustomArmorMaterials.DARK_ARMOR,EquipmentSlot.FEET, new Item.Properties().tab(ModItemGroups.Nmod_TAB)));
 
-    public static final RegistryObject<Item> STEEL_HELMET = ITEMS.register("steel_helmet", () -> new ArmorItem(CustomArmorMaterials.STEEL_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().tab(ModItemGroups.Nmod_TAB)));
-    public static final RegistryObject<Item> STEEL_CHESTPLATE = ITEMS.register("steel_chestplate", () -> new ArmorItem(CustomArmorMaterials.STEEL_ARMOR, EquipmentSlotType.CHEST, new Item.Properties().tab(ModItemGroups.Nmod_TAB)));
-    public static final RegistryObject<Item> STEEL_LEGGINGS = ITEMS.register("steel_leggings", () -> new ArmorItem(CustomArmorMaterials.STEEL_ARMOR, EquipmentSlotType.LEGS, new Item.Properties().tab(ModItemGroups.Nmod_TAB)));
-    public static final RegistryObject<Item> STEEL_BOOTS = ITEMS.register("steel_boots", () -> new ArmorItem(CustomArmorMaterials.STEEL_ARMOR, EquipmentSlotType.FEET, new Item.Properties().tab(ModItemGroups.Nmod_TAB)));
+    public static final RegistryObject<Item> STEEL_HELMET = ITEMS.register("steel_helmet", () -> new ArmorItem(CustomArmorMaterials.STEEL_ARMOR, EquipmentSlot.HEAD, new Item.Properties().tab(ModItemGroups.Nmod_TAB)));
+    public static final RegistryObject<Item> STEEL_CHESTPLATE = ITEMS.register("steel_chestplate", () -> new ArmorItem(CustomArmorMaterials.STEEL_ARMOR, EquipmentSlot.CHEST, new Item.Properties().tab(ModItemGroups.Nmod_TAB)));
+    public static final RegistryObject<Item> STEEL_LEGGINGS = ITEMS.register("steel_leggings", () -> new ArmorItem(CustomArmorMaterials.STEEL_ARMOR, EquipmentSlot.LEGS, new Item.Properties().tab(ModItemGroups.Nmod_TAB)));
+    public static final RegistryObject<Item> STEEL_BOOTS = ITEMS.register("steel_boots", () -> new ArmorItem(CustomArmorMaterials.STEEL_ARMOR, EquipmentSlot.FEET, new Item.Properties().tab(ModItemGroups.Nmod_TAB)));
 
 // Consomable mangeable
-    public static final RegistryObject<Item> CHERRY = ITEMS.register("cherry", () -> new Item(new Item.Properties().tab(ModItemGroups.Nmod_TAB).food(new Food.Builder().nutrition(2).saturationMod(0.3f).fast().effect(()-> new EffectInstance(Effects.HEAL, 1*1, 0),0.1F).build())));
-    public static final RegistryObject<Item> BLUEBERRIES = ITEMS.register("blueberries", () -> new Item(new Item.Properties().tab(ModItemGroups.Nmod_TAB).food(new Food.Builder().nutrition(2).saturationMod(0.3f).fast().build())));
-    public static final RegistryObject<Item> TOMATO = ITEMS.register("tomato", ()-> new Item(new Item.Properties().tab(ModItemGroups.Nmod_TAB).food(new Food.Builder().nutrition(3).saturationMod(0.3f).build())));
-    public static final RegistryObject<Item> BURGER = ITEMS.register("burger", ()-> new Item(new Item.Properties().stacksTo(2).tab(ModItemGroups.Nmod_TAB).food(new Food.Builder().nutrition(10).saturationMod(2f).fast().effect(()-> new EffectInstance(Effects.MOVEMENT_SLOWDOWN, 5*10, 0), 1F).effect(()-> new EffectInstance(Effects.WEAKNESS, 5*10, 0), 1F).build())));
-    public static final RegistryObject<Item> CHEESE = ITEMS.register("cheese", ()-> new Item(new Item.Properties().stacksTo(8).tab(ModItemGroups.Nmod_TAB).food(new Food.Builder().nutrition(5).saturationMod(0.9f).fast().build())));
-    public static final RegistryObject<Item> SOFT_BREAD = ITEMS.register("soft_bread" , ()-> new Item(new Item.Properties().stacksTo(16).tab(ModItemGroups.Nmod_TAB).food(new Food.Builder().nutrition(6).saturationMod(0.9f).fast().build())));
+    public static final RegistryObject<Item> CHERRY = ITEMS.register("cherry", () -> new Item(new Item.Properties().tab(ModItemGroups.Nmod_TAB).food(new FoodProperties.Builder().nutrition(2).saturationMod(0.3f).fast().effect(()-> new MobEffectInstance(MobEffects.HEAL, 1*1, 0),0.1F).build())));
+    public static final RegistryObject<Item> BLUEBERRIES = ITEMS.register("blueberries", () -> new Item(new Item.Properties().tab(ModItemGroups.Nmod_TAB).food(new FoodProperties.Builder().nutrition(2).saturationMod(0.3f).fast().build())));
+    public static final RegistryObject<Item> TOMATO = ITEMS.register("tomato", ()-> new Item(new Item.Properties().tab(ModItemGroups.Nmod_TAB).food(new FoodProperties.Builder().nutrition(3).saturationMod(0.3f).build())));
+    public static final RegistryObject<Item> BURGER = ITEMS.register("burger", ()-> new Item(new Item.Properties().stacksTo(2).tab(ModItemGroups.Nmod_TAB).food(new FoodProperties.Builder().nutrition(10).saturationMod(2f).fast().effect(()-> new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 5*10, 0), 1F).effect(()-> new MobEffectInstance(MobEffects.WEAKNESS, 5*10, 0), 1F).build())));
+    public static final RegistryObject<Item> CHEESE = ITEMS.register("cheese", ()-> new Item(new Item.Properties().stacksTo(8).tab(ModItemGroups.Nmod_TAB).food(new FoodProperties.Builder().nutrition(5).saturationMod(0.9f).fast().build())));
+    public static final RegistryObject<Item> SOFT_BREAD = ITEMS.register("soft_bread" , ()-> new Item(new Item.Properties().stacksTo(16).tab(ModItemGroups.Nmod_TAB).food(new FoodProperties.Builder().nutrition(6).saturationMod(0.9f).fast().build())));
 
 // Consomable buvable
-    public static final RegistryObject<Item> RED_FRUIT_TEA = ITEMS.register("red_fruit_tea", () -> new Item(new Item.Properties().stacksTo(1).tab(ModItemGroups.Nmod_TAB).food(new Food.Builder().nutrition(1).saturationMod(0.01f).effect(()-> new EffectInstance(Effects.HEAL, 1*1, 2),0.05f).effect(()-> new EffectInstance(Effects.REGENERATION, 20*10, 1),0.9f).effect(()-> new EffectInstance(Effects.HEALTH_BOOST, 20*30, 1),0.05f).build()))
+    public static final RegistryObject<Item> RED_FRUIT_TEA = ITEMS.register("red_fruit_tea", () -> new Item(new Item.Properties().stacksTo(1).tab(ModItemGroups.Nmod_TAB).food(new FoodProperties.Builder().nutrition(1).saturationMod(0.01f).effect(()-> new MobEffectInstance(MobEffects.HEAL, 1*1, 2),0.05f).effect(()-> new MobEffectInstance(MobEffects.REGENERATION, 20*10, 1),0.9f).effect(()-> new MobEffectInstance(MobEffects.HEALTH_BOOST, 20*30, 1),0.05f).build()))
     {
         @Override
-        public UseAction getUseAnimation(ItemStack stack) {
-            return UseAction.DRINK;
+        public UseAnim getUseAnimation(ItemStack stack) {
+            return UseAnim.DRINK;
          }
     });
 
-    public static final RegistryObject<Item> COFFEE = ITEMS.register("coffee", () -> new Item(new Item.Properties().stacksTo(1).tab(ModItemGroups.Nmod_TAB).food(new Food.Builder().saturationMod(0.3f).effect(()-> new EffectInstance(Effects.MOVEMENT_SPEED,20*10, 1),1.0f).build()))
+    public static final RegistryObject<Item> COFFEE = ITEMS.register("coffee", () -> new Item(new Item.Properties().stacksTo(1).tab(ModItemGroups.Nmod_TAB).food(new FoodProperties.Builder().saturationMod(0.3f).effect(()-> new MobEffectInstance(MobEffects.MOVEMENT_SPEED,20*10, 1),1.0f).build()))
     {
         @Override
-        public UseAction getUseAnimation(ItemStack stack) {
-            return UseAction.DRINK;}
+        public UseAnim getUseAnimation(ItemStack stack) {
+            return UseAnim.DRINK;}
     });
 
-    public static final RegistryObject<Item> GREEN_TEA = ITEMS.register("green_tea", () -> new Item(new Item.Properties().stacksTo(1).tab(ModItemGroups.Nmod_TAB).food(new Food.Builder().nutrition(1).saturationMod(0.01f).build()))
+    public static final RegistryObject<Item> GREEN_TEA = ITEMS.register("green_tea", () -> new Item(new Item.Properties().stacksTo(1).tab(ModItemGroups.Nmod_TAB).food(new FoodProperties.Builder().nutrition(1).saturationMod(0.01f).build()))
     {
         @Override
-        public UseAction getUseAnimation(ItemStack stack) {
-            return UseAction.DRINK;}
+        public UseAnim getUseAnimation(ItemStack stack) {
+            return UseAnim.DRINK;}
     });
 
 // Encore en test
