@@ -6,7 +6,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.util.LazyLoadedValue;
 
 public enum CustomItemTiers implements Tier {
-    PHAZON(4, 2031, 9f, 4f, 8, new LazyLoadedValue<>(() -> {return Ingredient.of(ModItems.LIQUID_PHAZON.get());}));
+    PHAZON(4, 2031, 9f, 4f, 8, new LazyLoadedValue(() -> {return Ingredient.of(ModItems.LIQUID_PHAZON.get());}));
 
     private final int harvestLevel;
     private final int maxUses;

@@ -5,7 +5,7 @@
   "item.nmod.liquid_phazon": "Phazon liquide",
   "item.nmod.phazon_helmet": "Casque de Phazon",
   "item.nmod.phazon_chestplate": "Plastron de Phazon",
-  "item.nmod.phazon_leggings": "Jambière de Phazon",
+  "item.nmod.phazon_leggings": "Jambières de Phazon",
   "item.nmod.phazon_boots": "Bottes de Phazon",
   "item.nmod.cherry": "Cerise",
   "item.nmod.blueberries": "Myrtilles",
@@ -21,5 +21,15 @@
   "item.nmod.cheese": "Fromage",
   "item.nmod.edarite_crystal": "Cristal d'Edarite",
   "block.nmod.edarite_ore": "Mirerai d'Edarite",
-  "item.nmod.bismuth_crystal": "Cristal de Bismuth"
+  "item.nmod.bismuth_crystal": "Cristal de Bismuth",
+  "item.nmod.soft_bread": "Pain de Mie",
+  "item.nmod.neko_fruit": "Neko Fruit",
+  "item.nmod.neko_fruit_p": "Neko Fruit",
+  "item.nmod.neko_fruit_r": "Neko Fruit",
+  "item.nmod.neko_fruit_h": "Neko Fruit",
+  "item.nmod.dark_helmet": "Casque Sombre",
+  "item.nmod.dark_chestplate": "Plastron Sombre",
+  "item.nmod.dark_leggins": "Jambières Sombre",
+  "item.nmod.dark_boots": "Bottes Sombre",
+  "item.nmod.lettuce": "Laitue"
 }
